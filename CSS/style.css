@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: hsl(162, 81%, 78%);
+    font-family: sans-serif;
+    height: 100vh;
+    text-align: center;
+}
