@@ -12,3 +12,24 @@ body {
     height: 100vh;
     text-align: center;
 }
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+code {
+    background-color: antiquewhite;
+    border-radius: 3px;
+    border: 2px solid lightseagreen;
+    padding: 5px 15px;
+}
+
+.secondary_text {
+    color: grey;
+    font-size: .7rem;
+    margin-top: 15px;
+}
