@@ -30,20 +30,20 @@ const alphabet = [
   "y",
   "z",
 ];
-const specials = '`!@#$%^&*(){}_+-=[]{};\':",.<>/?~°"';
+const specials = '`!@#$%^&*(){}-+_=[]{};\':",.<>/?~°"';
 const specialsArray = specials.split("");
 const equivocabili = "ìlI1oO0";
 let password = "";
-const display = document.getElementById("final_pass");
+const display = document.getElementById("final-pass");
+const lengthInput = document.getElementById("numbers");
 display.value = "";
-
 
 function getValues() {
   console.log("### GETTING VALUES ###");
   const length = document.getElementById("length").value;
   const special = document.getElementById("special").checked;
   const numbers = document.getElementById("numbers").checked;
-  const upper = document.querySelectorAll(".radio_maiuscole");
+  const upper = document.querySelectorAll(".radio-maiuscole");
   const simili = document.getElementById("simili").checked;
 
   upper.forEach((radio) => {
@@ -105,13 +105,10 @@ function putNumbers() {
 
   for (let j = 0; j < password.length; j++) {
     let i = Math.floor(Math.random() * 2);
-    i === 0
-      ? (temp += Math.floor(Math.random() * 10))
-      : temp += password[j];
+    i === 0 ? (temp += Math.floor(Math.random() * 10)) : (temp += password[j]);
   }
   password = temp;
 }
-
 
 function putSpecials() {
   console.log("### PUTTING SPECIALS IN ###");
@@ -138,7 +135,7 @@ function deleteSimili() {
   console.log("### DELETING SIMILI ###");
   let temp = "";
   for (let i = 0; i < password.length; i++) {
-    if(equivocabili.includes(password[i])){
+    if (equivocabili.includes(password[i])) {
       temp += alphabet[Math.floor(Math.random() * alphabet.length)];
       console.log(i, "preso", password[i]);
     } else {
@@ -153,3 +150,9 @@ function generatePassword() {
   getValues();
   generate();
 }
+
+console.log(lengthInput)
+
+// TODO: auto select della password
+// TODO: il valore della lunghezza viene preimpostato su 12
+// TODO: bottone copia incolla

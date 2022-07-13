@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap");
+
+/* font-family: 'Catamaran', sans-serif;
+
+    font-family: 'Yanone Kaffeesatz', sans-serif; */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,19 +13,78 @@
 body {
   display: grid;
   place-items: center;
-  background-color: hsl(162, 81%, 78%);
-  font-family: sans-serif;
+  background-color: #03020a;
   height: 100vh;
-  /* text-align: center; */
+  width: 100vw;
+  color: white;
+  position: relative;
+  z-index: 1;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 300;
+}
+
+img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+  filter: blur(3px);
 }
 
 .form {
   width: 50%;
   padding: 2rem;
-  background-color: azure;
+  background: rgb(18, 25, 47);
+  background: linear-gradient(
+    52deg,
+    rgba(64, 31, 98, 0.2) 5%,
+    rgba(18, 31, 47, 0.3) 22%,
+    rgba(18, 25, 47, 0.4) 45%,
+    rgba(52, 23, 74, 0.5) 70%,
+    rgba(64, 31, 98, 0.6) 90%,
+    rgba(18, 25, 47, 0.4) 98%
+  );
   border-radius: 1rem;
-  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2), 6px 6px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(44, 26, 68, 0.7), 0 0 13px rgba(44, 26, 68, 0.4);
   max-height: 700px;
+  backdrop-filter: blur(7px);
+}
+
+.head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span.heading {
+  font-family: "Catamaran", sans-serif;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: #213;
+  border: 1px solid #527;
+  opacity: 0.8;
+  font-size: 0.7rem;
+  display: grid;
+  place-items: center;
+}
+
+.badge:hover {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(85, 34, 119, 1);
+  border: 1px solid #638;
 }
 
 main {
@@ -28,15 +93,15 @@ main {
 
 main label {
   margin-left: 1rem;
-  font-size: .8rem;
-  color:rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 140%;
+  font-weight: 200;
 }
 
 main .input-container {
   width: 100%;
   display: flex;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 main fieldset {
@@ -46,12 +111,18 @@ main fieldset {
 main fieldset label {
   width: fit-content;
   margin-right: 1rem;
-  color: initial;
+  font-weight: 100;
+}
+main fieldset label:hover {
+  text-shadow: 0 0 15px rgba(85, 34, 119, 1);
+  background-color: #638;
 }
 
 main .label {
   width: 35%;
   display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 300;
 }
 
 main input {
@@ -78,10 +149,24 @@ main .right input {
 
 button {
   margin-left: 35%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  padding: 10px 1rem;
+  border-radius: 4px;
+  border: 1px solid #527;
+  background-color: #213;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-#final_pass {
+button:hover {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(85, 34, 119, 1);
+  border: 1px solid #638;
+}
+
+#final-pass {
   width: 65%;
   margin-left: 35%;
   min-height: 50px;
@@ -90,3 +175,6 @@ button {
   font-weight: bold;
   word-wrap: break-word;
 }
+
+/* TODO stile checkbox & radio */
+/* TODO stile password generata */

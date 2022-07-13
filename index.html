@@ -8,13 +8,17 @@
   </head>
 
   <body>
+    <img src="./bg.jpg" alt="" />
     <div method="get" class="form">
       <div class="head">
-        <h1>Password Generator</h1>
-        <p>
-          Scegli le regole per generare la tua password e clicca il tasto per
-          avere la tua password nuova fiammante!
-        </p>
+        <span class="heading" role="heading" aria-level="1"
+          >Password Generator</span
+        >
+        <span class="badge">1.8</span>
+      </div>
+      <div class="sub-title" role="heading" aria-level="2">
+        Scegli le regole per generare la tua password e clicca il tasto per
+        avere la tua password nuova fiammante!
       </div>
       <main>
         <div class="input-container">
@@ -31,40 +35,40 @@
         <div class="input-container">
           <div class="label">Caratteri Speciali</div>
           <input type="checkbox" name="special" id="special" />
-          <label for="special">("`!@#$%^&*(){}_+-=\[]{};':\",.<>/?~°\)</label>
+          <label for="special">("`!@#$%^&*(){}-+-=\[]{};':\",.<>/?~°\)</label>
         </div>
         <div class="input-container">
           <div class="label">Numeri</div>
-          <input type="checkbox" name="special" id="numbers" />
+          <input aria-label="numeri?" title="La password deve contenere numeri?" type="checkbox" name="special" id="numbers" readonly="true"/>
         </div>
         <div class="input-container">
           <div class="label">Maiuscole</div>
           <fieldset id="uppercase">
             <input
-              class="radio_maiuscole"
+              class="radio-maiuscole"
               type="radio"
               value="mix"
               name="uppercase"
-              id="mix_maiuscole"
+              id="mix-maiuscole"
               checked
             />
-            <label for="mix_maiuscole">maiuscole e minuscole</label>
+            <label for="mix-maiuscole">maiuscole e minuscole</label>
             <input
-              class="radio_maiuscole"
+              class="radio-maiuscole"
               type="radio"
               value="false"
               name="uppercase"
-              id="no_maiuscole"
+              id="no-maiuscole"
             />
-            <label for="no_maiuscole">Senza maiuscole</label>
+            <label for="no-maiuscole">Senza maiuscole</label>
             <input
-              class="radio_maiuscole"
+              class="radio-maiuscole"
               type="radio"
               value="true"
               name="uppercase"
-              id="solo_maiuscole"
+              id="solo-maiuscole"
             />
-            <label for="solo_maiuscole">Solo maiuscole</label>
+            <label for="solo-maiuscole">Solo maiuscole</label>
           </fieldset>
         </div>
         <div class="input-container">
@@ -77,13 +81,12 @@
         </button>
       </main>
       <div class="receiver">
-        <input type="text" name="final_pass" id="final_pass" />
+        <input aria-label="generated password" type="text" name="final-pass" id="final-pass" readonly/>
       </div>
       <footer></footer>
     </div>
     <div class="disclaimer">
-      Nessuno dei dati qui inseriti vengono inviati online, la password viene
-      totalmente generata online e non salviamo nessun cookie.
+      Nessuno dei dati qui inseriti è inviato online, la password viene generata sul tuo pc e non salviamo alcun tipo di cookie.
     </div>
     <!-- JS -->
     <script src="./Js/main.js"></script>
