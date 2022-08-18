@@ -90,9 +90,9 @@ function displayPassword() {
 
 function generate() {
   generateAllChars();
-  if (values.numbers) putNumbers();
   if (values.special) putSpecials();
   if (values.simili) deleteSimili();
+  if (values.numbers) putNumbers();
   if (values.upper === "true") password = password.toUpperCase();
   if (values.upper === "false") password = password.toLowerCase();
   if (values.upper === "mix") password = mixUpTheCases(password);
@@ -100,9 +100,8 @@ function generate() {
 }
 
 function putNumbers() {
-  console.log("### PUTTING NUMBERS IN ###");
+  console.log("### PUTTING NUMBERS IN IT ###");
   let temp = "";
-
   for (let j = 0; j < password.length; j++) {
     let i = Math.floor(Math.random() * 2);
     i === 0 ? (temp += Math.floor(Math.random() * 10)) : (temp += password[j]);
